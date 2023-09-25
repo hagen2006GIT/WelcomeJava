@@ -11,6 +11,7 @@ public class practiceBlock2 {
         System.out.println(isDivisor(20,11));
         System.out.println(isEqual(2,2,3));
         System.out.println(lastNumSum(lastNumSum(lastNumSum(lastNumSum(5,11),123),14),1));
+
     }
     public static int lastNumSum(int a, int b){
         return (a%10)+(b%10);

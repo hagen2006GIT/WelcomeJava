@@ -49,10 +49,9 @@ public class practiceBlock2 {
         return res;
     }
     public static String age(int x){
-        String res=null;
+        String res=x+" года";
         if((x%10==1)&&(x!=11)) res=x+" год";
         else if((x%10>1&&x%10<5)&&(x>11&&x<15)) res=x+" лет";
-        else res=x+" года";
         return res;
     }
     public static boolean magic6(int x, int y){

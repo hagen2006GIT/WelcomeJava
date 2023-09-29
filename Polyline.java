@@ -12,33 +12,32 @@ public class Polyline {
     }
     public Polyline(Point[] arrPoints) {
         Random rand =new Random();
-        this.arrLine=new Point[arrPoints.length][2];
+        this.arrLine=new Point[arrPoints.length-1][2];
         this.pointsArray=arrPoints;
         for(int i=0;i<arrPoints.length;i++){
             if(arrPoints[i].x==0 && arrPoints[i].y==0) {
                 this.pointsArray[i] = new Point(rand.nextInt(10) + 1, rand.nextInt(10) + 1);
             }
         }
-        System.out.println("Polyline {"+"arrLine="+Arrays.toString(this.getArrLine())+'}');
-        this.arrLine[0][0].x=this.pointsArray[0].x;
-        this.arrLine[0][0].y=this.pointsArray[0].y;
-        this.arrLine[0][1].x=this.pointsArray[1].x;
-        this.arrLine[0][1].y=this.pointsArray[1].y;
-        for(int i=1;i<arrPoints.length-1;i++) {
-            this.arrLine[i][0].x=this.arrLine[i-1][1].x;
-            this.arrLine[i][0].y=this.arrLine[i-1][1].y;
-
-            this.arrLine[i][1].x=this.pointsArray[i].x;
-            this.arrLine[i][1].y=this.pointsArray[i].y;
-        }
+        FillArrLine();
     }
 
     public Point[][] getArrLine() {
         return arrLine;
     }
 
+    public void FillArrLine() {
+        this.arrLine[0][0]=this.pointsArray[0];
+        this.arrLine[0][1]=this.pointsArray[1];
+        for(int i=1;i<this.pointsArray.length-1;i++) {
+            this.arrLine[i][0]=this.arrLine[i-1][1];
+            this.arrLine[i][1]=this.pointsArray[i+1];
+        }
+    }
+
     public void setPointsArray(Point[] pointsArray) {
         this.pointsArray = pointsArray;
+        FillArrLine();
     }
 
     public Point[] getPointsArray() {
@@ -60,6 +59,16 @@ public class Polyline {
                                     +this.pointsArray[i+1].x)*2
                                     +(this.pointsArray[i].y
                                     +this.pointsArray[i+1].y)*2);
+        }
+        return sumLen;
+    }
+    public int PolyArrayLength(){
+        int sumLen=0;
+        for(int i=0;i<this.arrLine.length;i++) {
+            sumLen+=(int) Math.sqrt((this.arrLine[i][0].x
+                    +this.arrLine[i][1].x)*2
+                    +(this.arrLine[i][0].y
+                    +this.arrLine[i][1].y)*2);
         }
         return sumLen;
     }

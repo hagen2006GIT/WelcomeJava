@@ -1,6 +1,31 @@
-public class Fraction {
+public class Fraction extends Number{
     private int numerator;
     private int denominator;
+
+    public int intValue(){
+        return 0;
+    }
+
+    public int intValue(int n){
+        return 0;
+    }
+
+    @Override
+    public long longValue() {
+        return 0;
+    }
+
+    @Override
+    public float floatValue() {
+        return 0;
+    }
+
+    @Override
+    public double doubleValue() {
+        return 0;
+    }
+
+    ;
 
     public Fraction(int numerator, int denominator) {
         setNumerator(numerator);

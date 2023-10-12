@@ -3,10 +3,24 @@ import java.util.Arrays;
 public class Start3 {
     public static void main(String[] args){
 
-        Account acc1=new Account("40817810545251231200");
-        System.out.println(acc1);
+        Point p1=new Point(1,3);
+        Point3D p3D=new Point3D(2,4,7);
+
+        System.out.println(p1);
+        System.out.println(p3D);
+
+/*        Account acc1=new Account("40817810545251231200");
+        Account acc2=new Account("40817810545251231201");
+        Account acc3=new Account("40817810545251231202");
+        Client cl1=new Client("Семен","Иванов","1245","654852");
+        Account[] accountsArray=new Account[]{acc1,acc2,acc3};
         acc1.setRest(100);
-        System.out.println(acc1);
+        acc2.setRest(120);
+        acc3.setRest(1340);
+        cl1.setArrAcc(accountsArray);
+        cl1.restPlus(acc3,200);
+        System.out.println(cl1);*/
+
 /*        Depart dep1=new Depart();
         Depart dep2=new Depart();
         dep1.title="Отдел 1";

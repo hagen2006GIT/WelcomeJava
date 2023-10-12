@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class Polyline {
+public class Polyline implements Lenable{
     Point[] pointsArray;
     Point[][] arrLine;
     public Polyline() {
@@ -52,7 +52,7 @@ public class Polyline {
         }
         return res+"]";
     }
-    public int PolyLength(){
+    public int length(){
         int sumLen=0;
         for(int i=0;i<this.pointsArray.length-1;i++) {
             sumLen+=(int) Math.sqrt((this.pointsArray[i].x
@@ -71,5 +71,10 @@ public class Polyline {
                     +this.arrLine[i][1].y)*2);
         }
         return sumLen;
+    }
+
+    @Override
+    public int Len() {
+        return length();
     }
 }

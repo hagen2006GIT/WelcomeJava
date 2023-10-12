@@ -1,15 +1,17 @@
 import java.util.Arrays;
 
 public class Student {
+    public Rule rule;
     private String name;
     private int[] arrScore;
 
-    public Student(String name) {
-        this(name,new int[]{});
+    public Student(String name,Rule r) {
+        this(name,r,new int[]{});
     }
 
-    public Student(String name, int[] arrScore) {
+    public Student(String name, Rule r, int[] arrScore) {
         this.name = name;
+        this.rule=r;
         setArrScore(arrScore);
     }
 

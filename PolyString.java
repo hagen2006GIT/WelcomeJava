@@ -1,5 +1,5 @@
 
-public class PolyString implements Lenable{
+/*public class PolyString implements Lenable{
     String str;
 
     public PolyString(String str) {
@@ -10,3 +10,4 @@ public class PolyString implements Lenable{
         return this.str.length();
     }
 }
+*/

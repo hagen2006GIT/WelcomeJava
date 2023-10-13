@@ -2,13 +2,7 @@ import java.util.Arrays;
 
 public class Start2 {
 
-    static String Sing(Singable s) {
-        return s.Sing();
-    }
 
-    static int Len(Lenable l) {
-        return l.Len();
-    }
     static double Area(Figurable f) {
         return f.Area();
     }
@@ -28,7 +22,7 @@ public class Start2 {
         Points p2=new Points(arr1);
         System.out.println(p2);
 */
-/*        Point p1=new Point(1,5);
+/*        ru.courses.point.Point p1=new ru.courses.point.Point(1,5);
         Circle c1=new Circle(p1,10);
         Box b1=new Box(p1,15);
         Rectangle r1=new Rectangle(p1,20,25);
@@ -40,15 +34,15 @@ public class Start2 {
         System.out.println("r1.Area (Figerable)="+Area(r1));
         System.out.println("Общая площадь="+(Area(c1)+Area(b1)+Area(r1)));
 */
-/*        Sparrow sparrow1 = new Sparrow(true);
-        Sparrow sparrow2 = new Sparrow(true);
-        Cuckoo cuckoo1 = new Cuckoo(true);
-        Cuckoo cuckoo2 = new Cuckoo(true);
-        Parrot parrot1 = new Parrot(true, "Попка-попугай");
-        Parrot parrot2 = new Parrot(true, "Федоров-другой");
-        Parrot parrot3 = new Parrot(true, "Жора-хороший");
-        Bird[] arrBird=new Bird[]{sparrow1,parrot1,parrot3,sparrow2,parrot2,cuckoo2};
-        for(Bird b:arrBird) {
+/*        ru.courses.bird.Sparrow sparrow1 = new ru.courses.bird.Sparrow(true);
+        ru.courses.bird.Sparrow sparrow2 = new ru.courses.bird.Sparrow(true);
+        ru.courses.bird.Cuckoo cuckoo1 = new ru.courses.bird.Cuckoo(true);
+        ru.courses.bird.Cuckoo cuckoo2 = new ru.courses.bird.Cuckoo(true);
+        ru.courses.bird.Parrot parrot1 = new ru.courses.bird.Parrot(true, "Попка-попугай");
+        ru.courses.bird.Parrot parrot2 = new ru.courses.bird.Parrot(true, "Федоров-другой");
+        ru.courses.bird.Parrot parrot3 = new ru.courses.bird.Parrot(true, "Жора-хороший");
+        ru.courses.bird.Bird[] arrBird=new ru.courses.bird.Bird[]{sparrow1,parrot1,parrot3,sparrow2,parrot2,cuckoo2};
+        for(ru.courses.bird.Bird b:arrBird) {
             System.out.println(Sing(b));
         }
 */
@@ -57,18 +51,18 @@ public class Start2 {
         System.out.println(parrot1);
 
         PolyString str1=new PolyString("Привет");
-        Point[] arr1=new Point[4];
-        arr1[0]=new Point(1,5);
-        arr1[1]=new Point(2,8);
-        arr1[2]=new Point(5,3);
-        arr1[3]=new Point(8,9);
+        ru.courses.point.Point[] arr1=new ru.courses.point.Point[4];
+        arr1[0]=new ru.courses.point.Point(1,5);
+        arr1[1]=new ru.courses.point.Point(2,8);
+        arr1[2]=new ru.courses.point.Point(5,3);
+        arr1[3]=new ru.courses.point.Point(8,9);
 
-        Polyline pLine1=new Polyline(arr1);
+        ru.courses.polyline.Polyline pLine1=new ru.courses.polyline.Polyline(arr1);
         ClosedPolyLine pLine2=new ClosedPolyLine(arr1);
         System.out.println(pLine1);
         System.out.println(pLine2);
 
-//        System.out.println("Polyline {"+"pointsArray="+Arrays.toString(pLine1.getPointsArray())+'}');
+//        System.out.println("ru.courses.polyline.Polyline {"+"pointsArray="+Arrays.toString(pLine1.getPointsArray())+'}');
         System.out.println(pLine1.length());
         System.out.println(Len(pLine1));
 //        System.out.println(pLine1.PolyArrayLength());
@@ -78,21 +72,15 @@ public class Start2 {
         System.out.println("String length="+Len(str1));
 
 */
-/*        arr1[1]=new Point(12,8);
+/*        arr1[1]=new ru.courses.point.Point(12,8);
         pLine1.setPointsArray(arr1);
         System.out.println(pLine1);
-        System.out.println("Polyline {"+"pointsArray="+Arrays.toString(pLine1.getPointsArray())+'}');
+        System.out.println("ru.courses.polyline.Polyline {"+"pointsArray="+Arrays.toString(pLine1.getPointsArray())+'}');
         System.out.println(pLine1.PolyLength());
         System.out.println(pLine1.PolyArrayLength());
 
-        System.out.println("Polyline {"+"arrLine="+Arrays.deepToString(pLine1.getArrLine())+'}');*/
+        System.out.println("ru.courses.polyline.Polyline {"+"arrLine="+Arrays.deepToString(pLine1.getArrLine())+'}');*/
     }
-}
-interface Singable{
-    public abstract String Sing();
-}
-interface Lenable{
-    public abstract int Len();
 }
 interface Figurable{
     public abstract double Area();

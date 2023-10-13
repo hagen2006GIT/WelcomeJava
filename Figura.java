@@ -1,3 +1,5 @@
+import ru.courses.point.Point;
+
 public class Figura implements Figurable {
     Point pointBegin;
     public double Area() {

@@ -1,3 +1,5 @@
+import ru.courses.point.Point;
+
 public class Point3D extends Point {
 
     int z;

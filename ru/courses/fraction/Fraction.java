@@ -1,4 +1,6 @@
-public class Fraction extends Number{
+package ru.courses.fraction;
+
+public class Fraction extends Number implements Cloneable{
     private int numerator;
     private int denominator;
 
@@ -25,11 +27,27 @@ public class Fraction extends Number{
         return 0;
     }
 
-    ;
+    @Override
+    public boolean equals(Object obj) {
+        Fraction fTmp=(Fraction)obj;
+        return(this.numerator==fTmp.numerator && this.denominator==fTmp.denominator);
+    }
+
+    public Fraction() {
+        this(1,1);
+    }
 
     public Fraction(int numerator, int denominator) {
         setNumerator(numerator);
         setDenominator(denominator);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Fraction fTmp=new Fraction();
+        fTmp.numerator=this.numerator;
+        fTmp.denominator=this.denominator;
+        return fTmp;
     }
 
     public void setNumerator(int numerator) {

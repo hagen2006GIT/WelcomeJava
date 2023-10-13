@@ -1,3 +1,5 @@
+import ru.courses.point.Point;
+
 public class Square {
     private Point pointTopAngle;
     private int l;

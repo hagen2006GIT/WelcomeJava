@@ -1,9 +1,27 @@
-import java.util.Arrays;
+package ru.courses.polyline;
+
+import ru.courses.point.Point;
+
 import java.util.Random;
 
-public class Polyline implements Lenable{
+public class Polyline implements Lenable {
+    static int Len(Lenable l) {
+        return l.Len();
+    }
     Point[] pointsArray;
     Point[][] arrLine;
+
+    @Override
+    public boolean equals(Object obj) {
+        ru.courses.point.Point[] arr1=new ru.courses.point.Point[2];
+        arr1[0]=new ru.courses.point.Point(1,5);
+        arr1[1]=new ru.courses.point.Point(1,5);
+        Polyline plTmp=new Polyline(arr1);
+        plTmp=(Polyline) obj;
+        if(plTmp.arrLine.length!=this.arrLine.length) return false;
+        return true;
+    }
+
     public Polyline() {
         this(3); //по умолчанию линия состоит из 3 отрезков
     }
@@ -77,4 +95,7 @@ public class Polyline implements Lenable{
     public int Len() {
         return length();
     }
+}
+interface Lenable{
+    public abstract int Len();
 }

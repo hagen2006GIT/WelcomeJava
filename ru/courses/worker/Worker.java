@@ -1,17 +1,19 @@
-public class Worker {
+package ru.courses.worker;
+
+class Worker {
     String name;
     Depart depart;
 
-    public Worker(String name, Depart depart) {
+    protected  Worker(String name, Depart depart) {
         setName(name);
         setDepart(depart);
     }
 
-    public void setName(String name) {
+    protected  void setName(String name) {
         this.name = name;
     }
 
-    public void setDepart(Depart depart) {
+    protected  void setDepart(Depart depart) {
         this.depart = depart;
     }
 
